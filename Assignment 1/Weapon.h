@@ -1,0 +1,10 @@
+#include "Item.h"
+
+#ifndef WEAPON_H
+#define WEAPON_H
+
+class Weapon : public GameObject {
+
+};
+
+#endif
