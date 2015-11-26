@@ -5,14 +5,16 @@
 
 class GameObject
 {
-private:
+protected:
     const std::string kName;
-    static int count_;
 
-public:
     GameObject();
     GameObject(const std::string& name);
     virtual ~GameObject();
+
+public:
+    static int count_;
+
     virtual std::string getName();
     virtual int getCount();
 };

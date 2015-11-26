@@ -3,16 +3,15 @@
 #ifndef OUTFIT_H
 #define OUTFIT_H
 
+//could it be protected/private inheritance?
 class Outfit : public Item
 {
 private:
-    int count;
-    const int SPECIAL;
+    const int kSPECIAL;
 
-    static int count;
 public:
     Outfit(const std::string& name, const int& durability, const int& special);
-    ~Outfit();
+    virtual ~Outfit();
     const int getSPECIAL();
 };
 

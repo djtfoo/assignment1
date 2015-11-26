@@ -1,9 +1,9 @@
+#include <iostream>
 #include "Outfit.h"
 
-Outfit::Outfit(const std::string& name, const int& durability, const int& special) : SPECIAL(special)
+Outfit::Outfit(const std::string& name, const int& durability, const int& special) : Item(name, durability), kSPECIAL(special)
 {
-    GameObject(name);
-    Item(durability);
+    std::cout << "Outfit Object being instantiated" << std::endl;
 }
 
 Outfit::~Outfit()
@@ -12,5 +12,5 @@ Outfit::~Outfit()
 
 const int Outfit::getSPECIAL()
 {
-    return SPECIAL;
+    return kSPECIAL;
 }
