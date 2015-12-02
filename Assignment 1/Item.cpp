@@ -15,11 +15,6 @@ Item::~Item()
 {
 }
 
-void Item::reduceDurability(const int& reduction)
-{
-    durability_ -= reduction;
-}
-
 const int Item::getDurability()
 {
     return durability_;

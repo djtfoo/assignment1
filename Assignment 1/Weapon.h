@@ -13,6 +13,7 @@ public:
     Weapon(const std::string& name, const int& durability, const int& dmg);
     virtual ~Weapon();
     const int getAttackDmg();
+    virtual void receiveDamage(const int& damage);
 };
 
 #endif

@@ -5,16 +5,16 @@
 
 class GameObject
 {
-protected:
+private:
     const std::string kName;
-
-    GameObject();
-    GameObject(const std::string& name);
-    virtual ~GameObject();
-
-public:
     static int count_;
 
+protected:
+    GameObject();   //default constructor - alternatively, provide default arguments for every parameter
+    GameObject(const std::string& name);
+
+public:
+    virtual ~GameObject();
     virtual std::string getName();
     virtual int getCount();
 };
