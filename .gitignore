@@ -1,4 +1,3 @@
-
 Debug/
 Release/
 *.opensdf
@@ -6,3 +5,4 @@ Release/
 *.suo
 *.user
 ipch/
+Doxygen/
