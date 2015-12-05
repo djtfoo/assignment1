@@ -3,6 +3,7 @@
 
 Dweller::Dweller(const std::string& name, const int& special) : GameObject(name), SPECIAL_(special), position_(0, 0), health_(100), radiation_(0), stimpak_(0), radAway_(0), outfit_(0), weapon_(0)
 {
+    //debugging purposes
     std::cout << "Dweller Object being instantiated" << std::endl;
 }
 
@@ -17,7 +18,7 @@ const int Dweller::getSPECIAL()
 
 const int Dweller::getCurrentHealth()
 {
-    return health_;
+    return health_ - radiation_;
 }
 
 const int Dweller::getCurrentRadDamage()
@@ -27,7 +28,10 @@ const int Dweller::getCurrentRadDamage()
 
 const int Dweller::getAttackDmg()
 {
-    return 1;
+    if (weapon_ != NULL)
+        return 1;
+    else
+        return weapon_->getAttackDmg();
 }
 
 void Dweller::setPosition(const Vec2D& position)
@@ -40,19 +44,20 @@ const Vec2D Dweller::getPosition()
     return position_;
 }
 
-bool Dweller::receiveHealthDamage(const int& health_dmg)
+void Dweller::receiveHealthDamage(const int& dmg)
 {
-    return true;
+    health_ -= dmg;
 }
 
-bool Dweller::receiveRadDamage(const int& rad_dmg)
+void Dweller::receiveRadDamage(const int& dmg)
 {
-    return true;
+    radiation_ += dmg;
 }
 
-void Dweller::receiveEquipmentDamage(const int& equip_dmg)
+void Dweller::receiveEquipmentDamage(const int& dmg)
 {
-
+    weapon_->receiveDamage(dmg);
+    outfit_->receiveDamage(dmg);
 }
 
 void Dweller::addStimpak(const int& quantity)
@@ -68,37 +73,38 @@ void Dweller::addRadAway(const int& quantity)
 void Dweller::useStimpak()
 {
     health_ += 20;
-    if (health_ > 100) {
-        health_ = 100;
+    if (health_ > 100 - radiation_) {
+        health_ = 100 - radiation_;
     }
     stimpak_ -= 1;
 }
 
 void Dweller::useRadAway()
 {
-    //how to use radAway???
+    radiation_ -= 10;
+    if (radiation_ < 0) {
+        radiation_ = 0;
+    }
     radAway_ -= 1;
 }
 
-const Outfit* Dweller::assignOutfit(const Outfit* outfit)
+Outfit* Dweller::assignOutfit(Outfit* outfit)
 {
     outfit_ = outfit;
+    //add to Dweller's SPECIAL
     return outfit_;
 }
 
-const Weapon* Dweller::assignWeapon(const Weapon* weapon)
+Weapon* Dweller::assignWeapon(Weapon* weapon)
 {
+    weapon_ = weapon;
     return weapon_;
 }
 
 bool Dweller::isDead()
 {
-    if (health_ <= 0) {
-        delete outfit_;
-        delete weapon_;
+    if (getCurrentHealth() <= 0)
         return true;
-    }
-    else {
+    else
         return false;
-    }
 }

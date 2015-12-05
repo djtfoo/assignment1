@@ -11,6 +11,7 @@ int GameObject::count_ = 0;
 
 void main(void)
 {
+    //it is no longer = new something
     Outfit* outfit = new Outfit("dress", 5, 10000);
     Outfit outfit2("shirt", 10, 10000);
     Item* outfit3 = new Outfit("armour", 100, 10000);

@@ -8,14 +8,12 @@ class Item : public GameObject
 {
 protected:
     int durability_;
-
-    Item(); //default constructor - alternatively, provide default arguments for every parameter
-    Item(const std::string& name, const int& durability);
+    Item(const std::string& name = "Item", const int& durability = 1);  //in class diagram, it is public
 
 public:
     virtual ~Item();
     virtual void receiveDamage(const int& damage) = 0;
-    virtual const int getDurability();
+    const int getDurability();
 };
 
 #endif

@@ -10,13 +10,12 @@ private:
     static int count_;
 
 protected:
-    GameObject();   //default constructor - alternatively, provide default arguments for every parameter
-    GameObject(const std::string& name);
+    GameObject(const std::string& name = "GameObject");
 
 public:
     virtual ~GameObject();
-    virtual std::string getName();
-    virtual int getCount();
+    std::string getName();
+    static int getCount();
 };
 
 #endif

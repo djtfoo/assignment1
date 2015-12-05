@@ -3,6 +3,7 @@
 
 Outfit::Outfit(const std::string& name, const int& durability, const int& special) : Item(name, durability), kSPECIAL(special)
 {
+    //debugging purposes
     std::cout << "Outfit Object being instantiated" << std::endl;
 }
 

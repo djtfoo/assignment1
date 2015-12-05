@@ -3,7 +3,6 @@
 #ifndef WEAPON_H
 #define WEAPON_H
 
-//could it be protected/private inheritance?
 class Weapon : public Item
 {
 private:

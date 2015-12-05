@@ -15,8 +15,8 @@ private:
     int radiation_;             //current radiation damage sustained by this Dweller
     int stimpak_;               //amount of Stimpaks this Dweller has
     int radAway_;               //amount of RadAway this Dweller has
-    const Outfit* outfit_;      //a pointer to the outfit of this Dweller
-    const Weapon* weapon_;      //a pointer to the weapon of this Dweller
+    Outfit* outfit_;      //a pointer to the outfit of this Dweller
+    Weapon* weapon_;      //a pointer to the weapon of this Dweller
 
 public:
     Dweller(const std::string& name, const int& special = 0);   //takes in name and SPECIAL value
@@ -27,15 +27,15 @@ public:
     const int getAttackDmg();       //return current attack damage value
     void setPosition(const Vec2D& position);
     const Vec2D getPosition();
-    bool receiveHealthDamage(const int& health_dmg);
-    bool receiveRadDamage(const int& rad_dmg);
-    void receiveEquipmentDamage(const int& equip_dmg);
+    void receiveHealthDamage(const int& dmg);
+    void receiveRadDamage(const int& dmg);
+    void receiveEquipmentDamage(const int& dmg);
     void addStimpak(const int& quantity);
     void addRadAway(const int& quantity);
     void useStimpak();
     void useRadAway();
-    const Outfit* assignOutfit(const Outfit* outfit);
-    const Weapon* assignWeapon(const Weapon* weapon);
+    Outfit* assignOutfit(Outfit* outfit);
+    Weapon* assignWeapon(Weapon* weapon);
     bool isDead();          //if health drops below 1, Dweller is dead
 };
 

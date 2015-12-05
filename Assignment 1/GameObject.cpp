@@ -1,19 +1,17 @@
 #include <iostream>
 #include "GameObject.h"
 
-GameObject::GameObject()
-{
-    std::cout << "GameObject Object is called" << std::endl;
-}
-
 GameObject::GameObject(const std::string& name) : kName(name)
 {
     ++count_;
+
+    //debugging purposes
     std::cout << "GameObject Object being instantiated" << std::endl;
 }
 
 GameObject::~GameObject()
 {
+    --count_;
 }
 
 std::string GameObject::getName()
