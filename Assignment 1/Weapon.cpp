@@ -4,7 +4,7 @@
 Weapon::Weapon(const std::string& name, const int& durability, const int& dmg) : Item(name, durability), kAttackDmg(dmg)
 {
     //debugging purposes
-    std::cout << "Outfit Object being instantiated" << std::endl;
+    std::cout << "Weapon Object being instantiated" << std::endl;
 }
 
 Weapon::~Weapon()

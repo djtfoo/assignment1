@@ -13,7 +13,10 @@ Dweller::~Dweller()
 
 const int Dweller::getSPECIAL()
 {
-    return SPECIAL_;
+    if (outfit_ == NULL || (outfit_ != NULL && outfit_->getDurability <= 0))
+        return SPECIAL_;
+    else
+        return weapon_->getAttackDmg();
 }
 
 const int Dweller::getCurrentHealth()
@@ -28,7 +31,7 @@ const int Dweller::getCurrentRadDamage()
 
 const int Dweller::getAttackDmg()
 {
-    if (weapon_ != NULL)
+    if (weapon_ == NULL || (weapon_ != NULL && weapon_->getDurability <= 0))
         return 1;
     else
         return weapon_->getAttackDmg();
@@ -56,8 +59,10 @@ void Dweller::receiveRadDamage(const int& dmg)
 
 void Dweller::receiveEquipmentDamage(const int& dmg)
 {
-    weapon_->receiveDamage(dmg);
-    outfit_->receiveDamage(dmg);
+    if (weapon_ != NULL)
+        weapon_->receiveDamage(dmg);
+    if (outfit_ != NULL)
+        outfit_->receiveDamage(dmg);
 }
 
 void Dweller::addStimpak(const int& quantity)
@@ -91,7 +96,6 @@ void Dweller::useRadAway()
 Outfit* Dweller::assignOutfit(Outfit* outfit)
 {
     outfit_ = outfit;
-    //add to Dweller's SPECIAL
     return outfit_;
 }
 

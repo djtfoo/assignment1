@@ -1,24 +1,27 @@
 #include <iostream>
+using std::cout;
+using std::endl;
 
-#include "Vec2D.h"
-#include "GameObject.h"
-#include "Item.h"
 #include "Dweller.h"
 #include "Outfit.h"
 #include "Weapon.h"
+#include "Item.h"
+#include "GameObject.h"
+#include "Vec2D.h"
 
-int GameObject::count_ = 0;
+void testNames();
+void shouldNotCompile();
 
-void main(void)
+int main()
 {
-    //it is no longer = new something
-    Outfit* outfit = new Outfit("dress", 5, 10000);
-    Outfit outfit2("shirt", 10, 10000);
-    Item* outfit3 = new Outfit("armour", 100, 10000);
-    std::cout << outfit2.getCount() << std::endl;
+    testNames();
+    //shouldNotCompile();
 
-    Dweller boy1("George", 1234567);
-    std::cout << "Dweller's name is " << boy1.getName() << std::endl;
-    boy1.assignOutfit(outfit);
-    std::cout << boy1.getAttackDmg() << std::endl;
+    Dweller d("One", 5555555);
+    Outfit o("Outfit", 0, 1234567);
+    cout << d.getSPECIAL() << endl;
+    d.assignOutfit(&o);
+    cout << d.getSPECIAL() << endl;
+
+    return 0;
 }
