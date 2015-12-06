@@ -1,7 +1,7 @@
-#include "GameObject.h"
-
 #ifndef ITEM_H
 #define ITEM_H
+
+#include "GameObject.h"
 
 //could it be protected/private inheritance?
 class Item : public GameObject

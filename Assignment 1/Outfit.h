@@ -1,7 +1,7 @@
-#include "Item.h"
-
 #ifndef OUTFIT_H
 #define OUTFIT_H
+
+#include "Item.h"
 
 //could it be protected/private inheritance?
 class Outfit : public Item

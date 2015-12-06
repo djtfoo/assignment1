@@ -1,10 +1,10 @@
+#ifndef DWELLER_H
+#define DWELLER_H
+
 #include "Vec2D.h"
 #include "GameObject.h"
 #include "Outfit.h"
 #include "Weapon.h"
-
-#ifndef DWELLER_H
-#define DWELLER_H
 
 class Dweller : public GameObject
 {
