@@ -1,3 +1,12 @@
+/******************************************************************************/
+/*!
+\file	Outfit.cpp
+\author Foo Jing Ting
+\par	email: 152856H@mymail.nyp.edu.sg
+\brief
+Class to define an outfit item that can be used by a dweller
+*/
+/******************************************************************************/
 #include <iostream>
 #include "Outfit.h"
 

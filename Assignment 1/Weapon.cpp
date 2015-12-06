@@ -1,3 +1,12 @@
+/******************************************************************************/
+/*!
+\file	Weapon.cpp
+\author Foo Jing Ting
+\par	email: 152856H@mymail.nyp.edu.sg
+\brief
+Class to define a weapon item that can be used by a Dweller
+*/
+/******************************************************************************/
 #include <iostream>
 #include "Weapon.h"
 

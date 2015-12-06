@@ -1,18 +1,33 @@
+/******************************************************************************/
+/*!
+\file	Weapon.h
+\author Foo Jing Ting
+\par	email: 152856H@mymail.nyp.edu.sg
+\brief
+Class to define a weapon item that can be used by a Dweller
+*/
+/******************************************************************************/
 #ifndef WEAPON_H
 #define WEAPON_H
 
 #include "Item.h"
 
+/******************************************************************************/
+/*!
+Class Weapon:
+\brief	Defines a weapon item and its methods
+*/
+/******************************************************************************/
 class Weapon : public Item
 {
 private:
-    const int kAttackDmg;
+    const int kAttackDmg;       //attack damage of this Weapon
 
 public:
-    Weapon(const std::string& name, const int& durability, const int& dmg);
-    virtual ~Weapon();
-    const int getAttackDmg();
-    virtual void receiveDamage(const int& damage);
+    Weapon(const std::string& name, const int& durability, const int& dmg);     //constructor takes in name of weapon, initial durability and weapon damage
+    virtual ~Weapon();          //destructor
+    const int getAttackDmg();   //return attack damage of this Weapon
+    virtual void receiveDamage(const int& damage);      //Weapon's durability gets reduced
 };
 
 #endif

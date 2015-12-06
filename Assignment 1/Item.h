@@ -1,19 +1,33 @@
+/******************************************************************************/
+/*!
+\file	Item.h
+\author Foo Jing Ting
+\par	email: 152856H@mymail.nyp.edu.sg
+\brief
+Interface class for all items in this game
+*/
+/******************************************************************************/
 #ifndef ITEM_H
 #define ITEM_H
 
 #include "GameObject.h"
 
-//could it be protected/private inheritance?
+/******************************************************************************/
+/*!
+Class Item:
+\brief	An interface class for all items in this game
+*/
+/******************************************************************************/
 class Item : public GameObject
 {
 protected:
-    int durability_;
-    Item(const std::string& name = "Item", const int& durability = 1);  //in class diagram, it is public
-
+    int durability_;        //durability of this Item
+    Item(const std::string& name = "Item", const int& durability = 1);  //constructor takes in name of object and initial durability value
+    //in class diagram, this constructor is public
 public:
     virtual ~Item();
-    virtual void receiveDamage(const int& damage) = 0;
-    const int getDurability();
+    virtual void receiveDamage(const int& damage) = 0;  //Item's durability gets reduced
+    const int getDurability();      //return durability of this Item
 };
 
 #endif

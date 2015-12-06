@@ -1,3 +1,12 @@
+/******************************************************************************/
+/*!
+\file	Item.cpp
+\author Foo Jing Ting
+\par	email: 152856H@mymail.nyp.edu.sg
+\brief
+Interface class for all items in this game
+*/
+/******************************************************************************/
 #include <iostream>
 #include "Item.h"
 

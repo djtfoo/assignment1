@@ -1,3 +1,12 @@
+/******************************************************************************/
+/*!
+\file	Dweller.cpp
+\author Foo Jing Ting
+\par	email: 152856H@mymail.nyp.edu.sg
+\brief
+Class to define the dweller character in this game
+*/
+/******************************************************************************/
 #include <iostream>
 #include "Dweller.h"
 
