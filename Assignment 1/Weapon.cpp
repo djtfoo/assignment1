@@ -12,8 +12,6 @@ Class to define a weapon item that can be used by a Dweller
 
 Weapon::Weapon(const std::string& name, const int& durability, const int& dmg) : Item(name, durability), kAttackDmg(dmg)
 {
-    //debugging purposes
-    std::cout << "Weapon Object being instantiated" << std::endl;
 }
 
 Weapon::~Weapon()
@@ -28,4 +26,6 @@ const int Weapon::getAttackDmg()
 void Weapon::receiveDamage(const int& damage)
 {
     durability_ -= damage / 2;
+    if (durability_ < 0)
+        durability_ = 0;
 }
