@@ -1,8 +1,8 @@
 /******************************************************************************/
 /*!
-\file	Item.h
+\file   Item.h
 \author Foo Jing Ting
-\par	email: 152856H@mymail.nyp.edu.sg
+\par    email: 152856H@mymail.nyp.edu.sg
 \brief
 Interface class for all items in this game
 */
@@ -15,7 +15,7 @@ Interface class for all items in this game
 /******************************************************************************/
 /*!
 Class Item:
-\brief	An interface class for all items in this game
+\brief  An interface class for all items in this game
 */
 /******************************************************************************/
 class Item : public GameObject

@@ -1,10 +1,10 @@
 /******************************************************************************/
 /*!
-\file	Outfit.h
+\file   Outfit.h
 \author Foo Jing Ting
-\par	email: 152856H@mymail.nyp.edu.sg
+\par    email: 152856H@mymail.nyp.edu.sg
 \brief
-Class to define an outfit item that can be used by a dweller
+Class to define an Outfit Item that can be used by a Dweller
 */
 /******************************************************************************/
 #ifndef OUTFIT_H
@@ -15,7 +15,7 @@ Class to define an outfit item that can be used by a dweller
 /******************************************************************************/
 /*!
 Class Outfit:
-\brief	Defines an outfit item and its methods
+\brief  An Outfit Item in this game
 */
 /******************************************************************************/
 class Outfit : public Item

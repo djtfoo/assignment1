@@ -1,8 +1,8 @@
 /******************************************************************************/
 /*!
-\file	Vec2D.cpp
+\file   Vec2D.cpp
 \author Foo Jing Ting
-\par	email: 152856H@mymail.nyp.edu.sg
+\par    email: 152856H@mymail.nyp.edu.sg
 \brief
 Struct to define a 2D vector
 */
@@ -11,11 +11,12 @@ Struct to define a 2D vector
 
 /******************************************************************************/
 /*!
-\brief	Set the elements of this vector
+\brief
+Set the elements of this vector
 
-\param	x
+\param  x
 x value
-\param	y
+\param  y
 y value
 */
 /******************************************************************************/

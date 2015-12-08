@@ -1,8 +1,8 @@
 /******************************************************************************/
 /*!
-\file	Dweller.h
+\file   Dweller.h
 \author Foo Jing Ting
-\par	email: 152856H@mymail.nyp.edu.sg
+\par    email: 152856H@mymail.nyp.edu.sg
 \brief
 Class to define the dweller character in this game
 */
@@ -18,7 +18,7 @@ Class to define the dweller character in this game
 /******************************************************************************/
 /*!
 Class Dweller:
-\brief	Defines the dweller character and its methods
+\brief  A character class in this game
 */
 /******************************************************************************/
 class Dweller : public GameObject

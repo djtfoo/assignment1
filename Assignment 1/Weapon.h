@@ -1,10 +1,10 @@
 /******************************************************************************/
 /*!
-\file	Weapon.h
+\file   Weapon.h
 \author Foo Jing Ting
-\par	email: 152856H@mymail.nyp.edu.sg
+\par    email: 152856H@mymail.nyp.edu.sg
 \brief
-Class to define a weapon item that can be used by a Dweller
+Class to define a Weapon Item that can be used by a Dweller
 */
 /******************************************************************************/
 #ifndef WEAPON_H
@@ -15,7 +15,7 @@ Class to define a weapon item that can be used by a Dweller
 /******************************************************************************/
 /*!
 Class Weapon:
-\brief	Defines a weapon item and its methods
+\brief  A Weapon Item in this game
 */
 /******************************************************************************/
 class Weapon : public Item

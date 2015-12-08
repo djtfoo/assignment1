@@ -1,8 +1,8 @@
 /******************************************************************************/
 /*!
-\file	GameObject.h
+\file   GameObject.h
 \author Foo Jing Ting
-\par	email: 152856H@mymail.nyp.edu.sg
+\par    email: 152856H@mymail.nyp.edu.sg
 \brief
 Interface class for all objects in this game
 */
@@ -15,7 +15,7 @@ Interface class for all objects in this game
 /******************************************************************************/
 /*!
 Class GameObject:
-\brief	An interface class for all objects in this game
+\brief  An interface class for all objects in this game
 */
 /******************************************************************************/
 class GameObject

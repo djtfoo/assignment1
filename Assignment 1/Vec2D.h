@@ -1,8 +1,8 @@
 /******************************************************************************/
 /*!
-\file	Vec2D.h
+\file   Vec2D.h
 \author Foo Jing Ting
-\par	email: 152856H@mymail.nyp.edu.sg
+\par    email: 152856H@mymail.nyp.edu.sg
 \brief
 Struct to define a 2D vector
 */
@@ -13,7 +13,7 @@ Struct to define a 2D vector
 /******************************************************************************/
 /*!
 Class Vec2D:
-\brief	Defines a 2D vector
+\brief  Defines a 2D vector
 */
 /******************************************************************************/
 struct Vec2D
