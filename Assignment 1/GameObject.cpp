@@ -7,7 +7,6 @@
 Interface class for all objects in this game
 */
 /******************************************************************************/
-#include <iostream>
 #include "GameObject.h"
 
 int GameObject::count_ = 0;
@@ -15,10 +14,10 @@ int GameObject::count_ = 0;
 /******************************************************************************/
 /*!
 \brief
-Constructor that takes in the name of the object. Default name is "GameObject"
+Constructor that takes in the name of this object. Default name is "GameObject"
 
 \param  name
-name of the object
+name of this object
 */
 /******************************************************************************/
 GameObject::GameObject(const std::string& name) : kName(name)
@@ -43,7 +42,7 @@ GameObject::~GameObject()
 Return the name of this object
 
 \return
-name of the object
+name of this object
 */
 /******************************************************************************/
 std::string GameObject::getName()
@@ -54,10 +53,10 @@ std::string GameObject::getName()
 /******************************************************************************/
 /*!
 \brief
-Return the total count of number of GameObjects that exist in the game
+Return the total count of number of GameObjects that exist in this game
 
 \return
-number of objects in the game
+number of objects in this game
 */
 /******************************************************************************/
 int GameObject::getCount()

@@ -4,25 +4,24 @@
 \author Foo Jing Ting
 \par    email: 152856H@mymail.nyp.edu.sg
 \brief
-Class to define the dweller character in this game
+Class to define the Dweller character in this game
 */
 /******************************************************************************/
-#include <iostream>
 #include "Dweller.h"
 
 /******************************************************************************/
 /*!
 \brief
-Constructor that takes in the name of the Dweller and SPECIAL value.
+Constructor that takes in the name and SPECIAL value of this Dweller.
 Default SPECIAL value is 0
 
 \param  name
-name of the Dweller
+name of this Dweller
 \param  special
-SPECIAL value of the Dweller
+SPECIAL value of this Dweller
 */
 /******************************************************************************/
-Dweller::Dweller(const std::string& name, const int& special) : GameObject(name), SPECIAL_(special), position_(0, 0), health_(100), radiation_(0), stimpak_(0), radAway_(0), outfit_(0), weapon_(0)
+Dweller::Dweller(const std::string& name, const int& special) : GameObject(name), position_(0, 0), SPECIAL_(special), health_(100), radiation_(0), stimpak_(0), radAway_(0), outfit_(0), weapon_(0)
 {
 }
 
@@ -267,7 +266,7 @@ Assign an Outfit to this Dweller
 pointer to an Outfit that will be assigned to this Dweller
 
 \return
-the existing Outfit the Dweller has (before assigning)
+the existing Outfit this Dweller has (before assigning)
 */
 /******************************************************************************/
 Outfit* Dweller::assignOutfit(Outfit* outfit)
@@ -286,7 +285,7 @@ Assign a Weapon to this Dweller
 pointer to a Weapon that will be assigned to this Dweller
 
 \return
-the existing Weapon the Dweller has (before assigning)
+the existing Weapon this Dweller has (before assigning)
 */
 /******************************************************************************/
 Weapon* Dweller::assignWeapon(Weapon* weapon)

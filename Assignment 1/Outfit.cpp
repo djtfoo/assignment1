@@ -7,20 +7,19 @@
 Class to define an Outfit Item that can be used by a Dweller
 */
 /******************************************************************************/
-#include <iostream>
 #include "Outfit.h"
 
 /******************************************************************************/
 /*!
 \brief
-Constructor that takes in the name of the Outfit, initial durability value and SPECIAL value.
+Constructor that takes in the name, initial durability value and SPECIAL value of this Outfit
 
 \param  name
-name of the Outfit
+name of this Outfit
 \param  durability
-initial durability of the Outfit
+initial durability of this Outfit
 \param  special
-SPECIAL value of the Outfit
+SPECIAL value of this Outfit
 */
 /******************************************************************************/
 Outfit::Outfit(const std::string& name, const int& durability, const int& special) : Item(name, durability), kSPECIAL(special)
@@ -43,7 +42,7 @@ Outfit::~Outfit()
 Return the SPECIAL value of this Outfit
 
 \return
-SPECIAL of this Outfit
+SPECIAL value of this Outfit
 */
 /******************************************************************************/
 const int Outfit::getSPECIAL()
@@ -57,7 +56,7 @@ const int Outfit::getSPECIAL()
 Reduce the durability of Outfit by damage taken
 
 \param  damage
-the damage taken by the Outfit
+the damage taken by this Outfit
 */
 /******************************************************************************/
 void Outfit::receiveDamage(const int& damage)

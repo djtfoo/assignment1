@@ -7,19 +7,18 @@
 Interface class for all items in this game
 */
 /******************************************************************************/
-#include <iostream>
 #include "Item.h"
 
 /******************************************************************************/
 /*!
 \brief
-Constructor that takes in the name of the Item and initial durability value.
+Constructor that takes in the name and initial durability value of this Item.
 Default name is "Item" and default durability value is 0
 
 \param  name
-name of the Item
+name of this Item
 \param  durability
-initial durability of the Item
+initial durability of this Item
 */
 /******************************************************************************/
 Item::Item(const std::string& name, const int& durability) : GameObject(name), durability_(durability)

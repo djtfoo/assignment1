@@ -23,7 +23,6 @@ class Item : public GameObject
 protected:
     int durability_;        //durability of this Item
     Item(const std::string& name = "Item", const int& durability = 1);  //constructor takes in name of object and initial durability value
-    //in class diagram, this constructor is public
 public:
     virtual ~Item();
     virtual void receiveDamage(const int& damage) = 0;  //Item's durability gets reduced
