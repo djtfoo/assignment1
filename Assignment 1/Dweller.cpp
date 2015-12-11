@@ -168,7 +168,13 @@ the radiation damage received by this Dweller
 /******************************************************************************/
 void Dweller::receiveRadDamage(const int& dmg)
 {
-    radiation_ += dmg;
+    if (radiation_ + dmg < 100) {
+        radiation_ += dmg;
+    }
+    else {
+        radiation_ = 100;
+    }
+
     if (100 - radiation_ < health_) {
         health_ = 100 - radiation_;
     }
