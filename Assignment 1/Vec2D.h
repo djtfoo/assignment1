@@ -22,6 +22,7 @@ public:
     double x;   //the x-component of this vector
     double y;   //the y-component of this vector
 
+    Vec2D();                //default constructor. Default value to 0
     Vec2D(double x, double y);  //a function to set the x- and y- components of this vector
 };
 

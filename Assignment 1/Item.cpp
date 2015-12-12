@@ -21,8 +21,14 @@ name of this Item
 initial durability of this Item
 */
 /******************************************************************************/
-Item::Item(const std::string& name, const int& durability) : GameObject(name), durability_(durability)
+Item::Item(const std::string& name, const int& durability) : GameObject(name)
 {
+    if (durability > 0) {
+        durability_ = durability;
+    }
+    else {
+        durability_ = 0;
+    }
 }
 
 /******************************************************************************/
