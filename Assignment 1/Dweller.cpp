@@ -18,7 +18,7 @@ Default SPECIAL value is 0
 \param  name
 name of this Dweller
 \param  special
-SPECIAL value of this Dweller
+initial SPECIAL value of this Dweller
 */
 /******************************************************************************/
 Dweller::Dweller(const std::string& name, const int& special) : GameObject(name), position_(0, 0), SPECIAL_(special), health_(100), radiation_(0), stimpak_(0), radAway_(0), outfit_(0), weapon_(0)
@@ -42,7 +42,7 @@ Returns the SPECIAL value of this Dweller. Dweller's SPECIAL is sum of his own S
 If Dweller has no Outfit assigned, or Outfit's durability is 0, Dweller's SPECIAL value is his own SPECIAL
 
 \return
-total SPECIAL value of Dweller
+current SPECIAL value of Dweller
 */
 /******************************************************************************/
 const int Dweller::getSPECIAL()
@@ -73,7 +73,7 @@ const int Dweller::getSPECIAL()
 Returns the current health value of this Dweller
 
 \return
-health value of Dweller
+current health value of Dweller
 */
 /******************************************************************************/
 const int Dweller::getCurrentHealth()
@@ -87,7 +87,7 @@ const int Dweller::getCurrentHealth()
 Returns the current radiation damage sustained by this Dweller
 
 \return
-radiation damage value of Dweller
+current radiation damage sustained by Dweller
 */
 /******************************************************************************/
 const int Dweller::getCurrentRadDamage()
@@ -102,7 +102,7 @@ Returns the attack damage of this Dweller. Dweller's attack damage is assigned W
 If Dweller has no Weapon assigned, or Weapon's durability is 0, Dweller's attack damage is 1
 
 \return
-attack damage value of Dweller
+current attack damage value of Dweller
 */
 /******************************************************************************/
 const int Dweller::getAttackDmg()
@@ -130,7 +130,7 @@ void Dweller::setPosition(const Vec2D& position)
 Returns the current position of this Dweller
 
 \return
-position vector of Dweller
+current position vector of Dweller
 */
 /******************************************************************************/
 const Vec2D Dweller::getPosition()
@@ -144,7 +144,7 @@ const Vec2D Dweller::getPosition()
 Reduces the health of this Dweller by damage taken. Minimum possible health is 0
 
 \param  dmg
-the damage received by this Dweller
+the damage dealt to Dweller
 */
 /******************************************************************************/
 void Dweller::receiveHealthDamage(const int& dmg)
@@ -163,7 +163,7 @@ void Dweller::receiveHealthDamage(const int& dmg)
 Increases the radiation damage sustained by Dweller. Maximum possible health is (100 - radiation damage)
 
 \param  dmg
-the radiation damage received by this Dweller
+the radiation damage dealt to Dweller
 */
 /******************************************************************************/
 void Dweller::receiveRadDamage(const int& dmg)
@@ -186,7 +186,7 @@ void Dweller::receiveRadDamage(const int& dmg)
 Outfit and Weapon that is assigned to this Dweller receive damage
 
 \param  dmg
-the damage received by this Dweller's assigned Outfit and Weapon
+the damage dealt to Dweller's assigned Outfit and Weapon
 */
 /******************************************************************************/
 void Dweller::receiveEquipmentDamage(const int& dmg)
@@ -203,7 +203,7 @@ void Dweller::receiveEquipmentDamage(const int& dmg)
 Increase number of Stimpaks this Dweller has by quantity received
 
 \param  quantity
-number of Stimpaks received by this Dweller
+number of Stimpaks Dweller gained
 */
 /******************************************************************************/
 void Dweller::addStimpak(const int& quantity)
@@ -217,7 +217,7 @@ void Dweller::addStimpak(const int& quantity)
 Increase number of RadAway this Dweller has by quantity received
 
 \param  quantity
-number of RadAway received by this Dweller
+number of RadAway Dweller gained
 */
 /******************************************************************************/
 void Dweller::addRadAway(const int& quantity)
